@@ -4,19 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Clarity.Presentation.Controllers.Base;
+using Clarity.Application.Users.Queries;
 
 namespace Clarity.Presentation.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController : BaseController
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<WeatherForecastController> _logger;        
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
@@ -26,6 +28,8 @@ namespace Clarity.Presentation.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+
+           
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

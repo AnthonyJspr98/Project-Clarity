@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.Application", "Clar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.Infrastructure", "Clarity.Infrastructure\Clarity.Infrastructure.csproj", "{BF9CE3FD-53EF-4D32-A625-617C98A1BAC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.UI", "Clarity.UI\Clarity.UI.csproj", "{8A7F2763-7CA7-44E8-AD21-78708BD0C3F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.Presentation", "Clarity.Presentation\Clarity.Presentation.csproj", "{8A7F2763-7CA7-44E8-AD21-78708BD0C3F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

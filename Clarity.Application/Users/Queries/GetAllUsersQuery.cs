@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Ironwood.Application.Common.Interaces;
 using Ironwood.Domain.Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Clarity.Application.Users.Queries
 {
@@ -11,28 +13,15 @@ namespace Clarity.Application.Users.Queries
     {
         public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, List<User>>
         {
+            private readonly IClarityDbContext _dbContext;
+
+            public GetAllUsersQueryHandler(IClarityDbContext dbContext)
+            {
+                _dbContext = dbContext;
+            }
             public async Task<List<User>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
             {
-               
-               var _userOne = new User
-                {
-                    UID = Guid.NewGuid(),
-                    Name = "Atong",
-                    Age = 21
-                };
-                var _userTwo = new User
-                {
-                    UID = Guid.NewGuid(),
-                    Name = "Ang",
-                    Age = 21
-                };
-
-                var _users = new List<User>();
-
-                _users.Add(_userOne);
-                _users.Add(_userTwo);
-              
-              return _users;
+                return await _dbContext.Users.ToListAsync();
             }
         }
     }

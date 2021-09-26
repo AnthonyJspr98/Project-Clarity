@@ -1,5 +1,5 @@
-﻿using Ironwood.Application.Common.Interaces;
-using Ironwood.Domain.Entities;
+﻿using Clarity.Application.Common.Interaces;
+using Clarity.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -30,7 +30,11 @@ namespace Clarity.Application.Users.Command
                 {
                     UID = Guid.NewGuid(),
                     Name = request.User.Name,
-                    Age = request.User.Age
+                    Age = request.User.Age,
+                    Wallet = new Wallet
+                    {
+                        UID = Guid.NewGuid()
+                    }
                 };
 
                 _dbContext.Users.Add(user);

@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Ironwood.Application.Common.Interaces;
-using Ironwood.Domain.Entities;
+using Clarity.Application.Common.Interaces;
+using Clarity.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

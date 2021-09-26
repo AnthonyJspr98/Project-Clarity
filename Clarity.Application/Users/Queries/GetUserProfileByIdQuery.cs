@@ -1,5 +1,5 @@
-﻿using Ironwood.Application.Common.Interaces;
-using Ironwood.Domain.Entities;
+﻿using Clarity.Application.Common.Interaces;
+using Clarity.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;

@@ -1,4 +1,4 @@
-using Ironwood.Application.Common.Interaces;
+using Clarity.Application.Common.Interaces;
 using Ironwood.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

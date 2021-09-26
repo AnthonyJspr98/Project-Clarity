@@ -1,4 +1,4 @@
-using Ironwood.Domain.Entities;
+using Clarity.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -12,6 +12,8 @@ namespace Clarity.Infrastructure.Persistence.Configurations
             builder.Property<int>("ID");
             //Make Primary Key
             builder.HasKey("ID");
+
+
         }
     }
 }

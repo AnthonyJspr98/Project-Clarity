@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Clarity.Application.Users.Command;
 using Clarity.Application.Users.Queries;
+using Clarity.Domain.Entities;
 using Clarity.Presentation.Controllers.Base;
 using Clarity.Presentation.Models;
-using Ironwood.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 

@@ -1,6 +1,6 @@
 using System.Reflection;
-using Ironwood.Application.Common.Interaces;
-using Ironwood.Domain.Entities;
+using Clarity.Application.Common.Interaces;
+using Clarity.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ironwood.Infrastructure.Persistence
@@ -8,8 +8,10 @@ namespace Ironwood.Infrastructure.Persistence
     public class ClarityDbContext : DbContext, IClarityDbContext
     {
         public DbSet<User> Users { get ; set; }
+		public DbSet<Wallet> Wallets { get ; set; }
+		public DbSet<WalletTransaction> WalletTransactions { get ; set ; }
 
-        public ClarityDbContext(DbContextOptions<ClarityDbContext> dbContext) : base (dbContext)
+		public ClarityDbContext(DbContextOptions<ClarityDbContext> dbContext) : base (dbContext)
 		{ 		
 			
 		}
@@ -18,5 +20,5 @@ namespace Ironwood.Infrastructure.Persistence
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 		}
-    }
+	}
 }

@@ -1,6 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Remove="Migrations\20210916060110_init.cs" />
+    <Compile Remove="Migrations\20210916060110_init.Designer.cs" />
+    <Compile Remove="Migrations\20210918112106_initial.cs" />
+    <Compile Remove="Migrations\20210918112106_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210918113304_initial.cs" />
+    <Compile Remove="Migrations\20210918113304_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210918113515_update.cs" />
+    <Compile Remove="Migrations\20210918113515_update.Designer.cs" />
+    <Compile Remove="Migrations\20210918113720_init.cs" />
+    <Compile Remove="Migrations\20210918113720_init.Designer.cs" />
+    <Compile Remove="Migrations\20210918113913_initial.cs" />
+    <Compile Remove="Migrations\20210918113913_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210918120012_initt.cs" />
+    <Compile Remove="Migrations\20210918120012_initt.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Persistence\Configurations\WalletConfiguration.cs~RF5054c22.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Clarity.Application\Clarity.Application.csproj" />
     <ProjectReference Include="..\Clarity.Domain\Clarity.Domain.csproj" />
   </ItemGroup>
@@ -9,6 +30,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.7" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <PropertyGroup>
